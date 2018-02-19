@@ -108,10 +108,17 @@ export default class CartStore {
     let existingCartItem = this._items
       .filter(ci => `${ci.groceryItem.id}` === `${groceryItem.id}`)[0];
     
+    this.addOrIncrementCartItem(existingCartItem, groceryItem);
+    // persist the cart (i.e., to an API)
+    this._saveCart();
+  }
+
+  addOrIncrementCartItem(existingCartItem, groceryItem) {
     if (existingCartItem) {
       // if it's already in the cart, increment its quantity
       existingCartItem.qty++;
-    } else {
+    }
+    else {
       // if it's not yet in the cart, add it to the cart
       let newItem = {
         groceryItem,
@@ -119,8 +126,6 @@ export default class CartStore {
       };
       this._items = this._items.concat(newItem);
     }
-    // persist the cart (i.e., to an API)
-    this._saveCart();
   }
 
   /**

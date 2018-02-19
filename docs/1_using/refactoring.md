@@ -14,12 +14,12 @@
 
 ### Go To
 
-* ...file
-* ...definition
-* ...type definition
-* ...symbol
-  * ...in file
-  * ...in workspace
+* ...file <kbd>cmd + P</kbd>
+* ...definition <kbd>cmd + click on term</kbd>
+* ...type definition <kbd>right-click on term and choose 'Go to type definition' </kbd>
+* ...symbol 
+  * ...in file <kbd>cmd + P then @</kbd>
+  * ...in workspace <kbd>cmd + P then #</kbd>
 * ...line (by number)
 
 <br><br><br><br>
@@ -27,8 +27,10 @@
 ### Selection
 
 * Select All <kbd>Cmd + A</kbd>
-* Select Next Occurrence <kbd>Your KB Here</kbd>
-* Select All Occurrences <kbd>Your KB Here</kbd>
+* Select Next Occurrence <kbd>Cmd + D</kbd>
+  * Undo last selection <kbd>cmd + U</kbd>
+  * Undo random access selection <kbd>alt + click on selection</kbd>
+* Select All Occurrences <kbd>Shift + cmd + L</kbd>
 
 <br><br>
 
